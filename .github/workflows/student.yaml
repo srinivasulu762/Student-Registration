@@ -5,8 +5,9 @@ jobs:
     git_Checkout:
         runs-on: ubuntu-latest
         steps:
-         - name: checkoutcode
-           uses: actions/checkout@v4
+          - name: build command
+            run: echo "print srinu"
+            
              
 
 
