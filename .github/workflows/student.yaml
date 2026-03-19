@@ -7,6 +7,11 @@ jobs:
         steps:
           - name: build command
             run: echo "print srinu"
+    test:
+       runs-on: ubuntu-latest
+       steps:
+          - name: testing a package
+            run: echo "print test"
             
              
 
