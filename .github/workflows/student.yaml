@@ -1,0 +1,16 @@
+name: studentregstationciworkflw
+on: 
+    workflow_dispatch
+jobs:
+    git_Checkout:
+        runs-on: ubuntu-latest
+        steps:
+         - name: checkoutcode
+           uses: actions/checkout@v4
+             
+
+
+
+
+
+  
