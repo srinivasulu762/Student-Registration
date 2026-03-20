@@ -6,12 +6,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: build command
-            run: echo "print srinu"
+            run: echo "print ${{ vars.NAME }}"
     test:
        runs-on: ubuntu-latest
        steps:
           - name: testing a package
-            run: echo "print test"
+            run: echo "print ${{ vars.NAME }}."
             
              
 
