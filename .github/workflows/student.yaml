@@ -12,6 +12,11 @@ jobs:
        steps:
           - name: testing a package
             run: echo "print ${{ vars.NAME }}."
+    secrets:
+       runs-on: ubuntu-latest
+       steps:
+        - name: adding secrets 
+          run: echo "print token ${{ secrets.TOKEN }}"
             
              
 
