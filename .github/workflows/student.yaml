@@ -17,6 +17,18 @@ jobs:
        steps:
         - name: adding secrets 
           run: echo "print token ${{ secrets.TOKEN }}"
+     checkout_git:
+         runs_on: ubuntu-latest
+         steps:
+          - name: checkoutcode
+            uses: actions/checkout@v4
+     display_docjerfle:
+        runs_on: ubuntu-latest
+        steps:
+          - name: display docker image
+            run: cat Dockerfile
+            
+            
             
              
 
