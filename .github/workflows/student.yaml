@@ -1,39 +1,32 @@
-name: studentregstationciworkflw
-on: 
-    workflow_dispatch
+name: student-registration-ci-workflow
+
+on:
+  workflow_dispatch
+
 jobs:
-    git_Checkout:
-        runs-on: ubuntu-latest
-        steps:
-          - name: build command
-            run: echo "print ${{ vars.NAME }}"
-    test:
-       runs-on: ubuntu-latest
-       steps:
-          - name: testing a package
-            run: echo "print ${{ vars.NAME }}."
-    secrets:
-       runs-on: ubuntu-latest
-       steps:
-        - name: adding secrets 
-          run: echo "print token ${{ secrets.TOKEN }}"
-     checkout_git:
-         runs_on: ubuntu-latest
-         steps:
-          - name: checkoutcode
-            uses: actions/checkout@v4
-     display_docjerfle:
-        runs_on: ubuntu-latest
-        steps:
-          - name: display docker image
-            run: cat Dockerfile
-            
-            
-            
-             
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print variable
+        run: echo "print ${{ vars.NAME }}"
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing package
+        run: echo "print ${{ vars.NAME }}"
 
+  secrets-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use secret
+        run: echo "print token ${{ secrets.TOKEN }}"
 
+  docker-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code   # 👈 MUST
+        uses: actions/checkout@v4
 
-
-  
+      - name: Display Dockerfile
+        run: cat Dockerfile
