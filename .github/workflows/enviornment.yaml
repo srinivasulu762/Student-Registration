@@ -2,12 +2,14 @@ name: enviromentworkflow
 
 on:
   workflow_dispatch:
-
+env:
+ NAME: srinu
 
 jobs:
    environemntvar:
        runs-on: ubuntu-latest
-       
+       env:
+         NAME: priya
        steps: 
          - name: vaiableconfiguriaon
            run: echo "this is printing variable $NAME"
