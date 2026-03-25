@@ -15,7 +15,7 @@ jobs:
          - name: vaiableconfiguriaon
            run: echo "this is printing variable $NAME"
          - name: want to print one more vatiable
-           run: echo "this is printing second stage $SRINU"
+           run: echo "this is printing second stage $SECOND"
          
  
    
