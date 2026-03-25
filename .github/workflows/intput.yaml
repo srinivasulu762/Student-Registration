@@ -1,1 +1,17 @@
-
+name: givetheinputs
+on:
+  workflow_dispatch:
+   inputs:
+    environment:
+       description: select the environment
+       required: true
+       default: dev         
+jobs:
+  inputtrigger:
+     runs-on: ubuntu-latest
+     steps:
+       - name: printtheenvironment
+         run: echo "print the envornemnt ${{ inputs.environment }}"
+    
+  
+  
