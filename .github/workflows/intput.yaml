@@ -4,8 +4,13 @@ on:
    inputs:
     environment:
        description: select the environment
-       required: true
-       default: dev         
+       required: true 
+       type: choice
+       options:
+         - dev
+         - test
+         - prod
+          
 jobs:
   inputtrigger:
      runs-on: ubuntu-latest
