@@ -10,10 +10,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: print context variable for evnets
-        run: echo "print the which type of events ${{ github.event_name }}
+        run: echo "print the which type of events ${{ github.event_name }}"
       - name: print repostrty
-        run: echo "print the repostirt ${{ github.repository }}
+        run: echo "print the repostirt ${{ github.repository }}"
       - name: print repostrty
-        run: echo "print the repostirt ${{ github.base_ref }}  
+        run: echo "print the repostirt ${{ github.base_ref }}"  
         
         
