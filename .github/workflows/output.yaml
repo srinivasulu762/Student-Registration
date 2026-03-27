@@ -1,0 +1,15 @@
+name: outputworkflow
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  contexjobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo print stageone
+        run: echo "version:1.0.0" >> $GITHUB_OUTPUT
+        
+    
+    
