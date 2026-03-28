@@ -13,7 +13,7 @@ jobs:
         run: echo "print the which type of events ${{ github.event_name }}"
       - name: print repostrty
         run: echo "print the repostirt ${{ github.repository }}"
-      - name: print repostrty
-        run: echo "print the repostirt ${{ github.base_ref }}"  
+      - name: print repostrty     
+        run: echo "print the repostirt ${{ github.ref_name }}"  
         
         
