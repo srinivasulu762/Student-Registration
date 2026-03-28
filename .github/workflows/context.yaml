@@ -15,5 +15,8 @@ jobs:
         run: echo "print the repostirt ${{ github.repository }}"
       - name: print repostrty     
         run: echo "print the repostirt ${{ job.check_run_id }}"  
+      - name: githubactor
+        run: echo "print the actor ${{ github.actor }}"
+           
         
         
