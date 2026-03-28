@@ -14,6 +14,6 @@ jobs:
       - name: print repostrty
         run: echo "print the repostirt ${{ github.repository }}"
       - name: print repostrty     
-        run: echo "print the repostirt ${{ github.ref_name }}"  
+        run: echo "print the repostirt ${{ job.check_run_id }}"  
         
         
