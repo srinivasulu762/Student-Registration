@@ -1,0 +1,23 @@
+name: Output Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  conditional-statement:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print branch name
+        run: echo "Current branch is ${{ github.ref_name }}"
+
+      - name: Run only on main branch
+        if: github.ref_name == 'main'
+        run: echo "Running on main branch"
+
+      - name: Run only on dev branch
+        if: github.ref_name == 'dev'
+        run: echo "Running on dev branch"
