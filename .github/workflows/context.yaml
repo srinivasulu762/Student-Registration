@@ -1,22 +1,12 @@
-name: contextworkflow
+name: outputworkflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch
 
 jobs:
-  contexjobs:
-    runs-on: windows-latest
+  conditionalstatement:
+    runs-on: ubuntu-latest
     steps:
-      - name: print context variable for evnets
-        run: echo "print the which type of events ${{ github.event_name }}"
-      - name: print repostrty
-        run: echo "print the repostirt ${{ github.repository }}"
-      - name: print repostrty     
-        run: echo "print the repostirt ${{ job.check_run_id }}"  
-      - name: githubactor
-        run: echo "print the actor ${{ github.actor }}"
-           
-        
-        
+      - name: print conditional statement
+        if: github.ref == 'refs/heads/main'
+        run: echo "running main branch"
